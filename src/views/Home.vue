@@ -45,12 +45,10 @@ export default {
   mounted () {
     if(this.$route.params.param1 == 2) {
       this.imageSrc = GreenButton
-      // this.audio = new Howl({ src: ["https://otologic.jp/sounds/se/pre/Quiz-Buzzer01-1.mp3"] })
       this.audio = new Howl({ src: [Buzzer2] })
     }
     else {
       this.imageSrc = RedButton
-      // this.audio = new Howl({ src: ["https://otologic.jp/sounds/se/pre/Quiz-Buzzer02-1.mp3"] })
       this.audio = new Howl({ src: [Buzzer1] })
     }
     
