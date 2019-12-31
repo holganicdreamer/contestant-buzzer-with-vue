@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # quiz-button
 
 ## Project setup
@@ -22,3 +23,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# contestant-buzzer-with-vue
+>>>>>>> 3c43872e705d3686ce402fad339eb135846d307c
