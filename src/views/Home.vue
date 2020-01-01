@@ -21,7 +21,6 @@ export default {
     return {
       audio: null,
       date: null,
-      opt: this.$route.params.param1,
       imageSrc: null,
     }
   },
