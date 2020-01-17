@@ -1,8 +1,15 @@
 <template>
-  <div @click="click">
+  <div>
+    <div class="header">
+      <a href="/holganicdreamer/">HOLGANIC DREAMER</a>
+    </div>
     <div class="box">
-      <img :src="imageSrc">
+      <img :src="imageSrc" @click="click">
       <h2 v-if="displayDate">あなたの押した時刻は {{displayDate}} です。</h2>
+      <div class="footer">
+        Image by <a href="https://3dicon-free.com/" target="_blank">3Dアイコン 無料素材</a><br>
+        Sound by <a href="https://otologic.jp/" target="_blank">OtoLogic</a>
+      </div>
     </div>
   </div>
 </template>
@@ -11,7 +18,7 @@
 import { Howl } from 'howler'
 import moment from 'moment'
 import RedButton from "../assets/red_button.png"
-import GreenButton from "../assets/green_button.png"
+import BlueButton from "../assets/blue_button.png"
 import Buzzer1 from "../assets/buzzer1.mp3"
 import Buzzer2 from "../assets/buzzer2.mp3"
 
@@ -43,7 +50,7 @@ export default {
   },
   mounted () {
     if(this.$route.params.param1 == 2) {
-      this.imageSrc = GreenButton
+      this.imageSrc = BlueButton
       this.audio = new Howl({ src: [Buzzer2] })
     }
     else {
@@ -56,6 +63,24 @@ export default {
 </script>
 
 <style>
+.header {
+  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  text-align:left;
+  font-size: 12px;
+}
+.header a {
+  text-decoration: none;
+  color: #777777;
+  font-weight: 600;
+}
+.footer {
+  font-size: 12px;
+}
+.footer a {
+  text-decoration: none;
+  color: #777777;
+  font-weight: 600;
+}
 .box {
   font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   /* background-color: pink; */
