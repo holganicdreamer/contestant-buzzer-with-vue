@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="header">
-      <a href="/holganicdreamer/">HOLGANIC DREAMER</a>
+      <a href="/holganicdreamer/">HOLGANIC DREAMER</a>&nbsp;-&nbsp;<a href="/holganicdreamer/software/vuejs/vuejsgadget/contestantbuzzer/">早押しボタン</a>&nbsp;-&nbsp;
+      <a :href="typeURL[type]">{{typeName[type]}}に切替</a>
     </div>
     <div class="box">
       <img :src="imageSrc" @click="click">
@@ -29,6 +30,9 @@ export default {
       audio: null,
       date: null,
       imageSrc: null,
+      type: 0,
+      typeURL : [ "/holganicdreamer/project/contestant-buzzer-with-vue/2", "/holganicdreamer/project/contestant-buzzer-with-vue/1" ],
+      typeName : [ "青", "赤" ]
     }
   },
   methods: {
@@ -50,12 +54,13 @@ export default {
   },
   mounted () {
     if(this.$route.params.param1 == 2) {
-      this.imageSrc = BlueButton
-      this.audio = new Howl({ src: [Buzzer2] })
+      this.imageSrc = BlueButton;
+      this.audio = new Howl({ src: [Buzzer2] });
+      this.type = 1;
     }
     else {
       this.imageSrc = RedButton
-      this.audio = new Howl({ src: [Buzzer1] })
+      this.audio = new Howl({ src: [Buzzer1] });
     }
     
   },
