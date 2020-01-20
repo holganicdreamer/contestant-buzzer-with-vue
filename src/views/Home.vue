@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <a href="/holganicdreamer/">HOLGANIC DREAMER</a>&nbsp;-&nbsp;<a href="/holganicdreamer/software/vuejs/vuejsgadget/contestantbuzzer/">早押しボタン</a>&nbsp;-&nbsp;
+      <a href="/holganicdreamer/">HOLGANIC DREAMER</a>&nbsp;-&nbsp;<a href="/holganicdreamer/software/vuejsgadget/contestantbuzzer/">クイズ用早押しボタン</a>&nbsp;-&nbsp;
       <a :href="typeURL[type]">{{typeName[type]}}に切替</a>
     </div>
     <div class="box">
