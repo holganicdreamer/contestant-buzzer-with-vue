@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <a href="/holganicdreamer/">HOLGANIC DREAMER</a>&nbsp;-&nbsp;<a href="/holganicdreamer/software/vuejsgadget/contestantbuzzer/">クイズ用早押しボタン</a>&nbsp;-&nbsp;
+      <a href="/">HOLGANIC DREAMER</a>&nbsp;-&nbsp;<a href="/software/vuejsgadget/contestantbuzzer">クイズ用早押しボタン</a>&nbsp;-&nbsp;
       <a :href="typeURL[type]">{{typeName[type]}}に切替</a>
     </div>
     <div class="box">
@@ -31,7 +31,7 @@ export default {
       date: null,
       imageSrc: null,
       type: 0,
-      typeURL : [ "/holganicdreamer/project/contestant-buzzer-with-vue/2", "/holganicdreamer/project/contestant-buzzer-with-vue/1" ],
+      typeURL : [ "/project/contestant-buzzer-with-vue/2", "/project/contestant-buzzer-with-vue/1" ],
       typeName : [ "青", "赤" ]
     }
   },
